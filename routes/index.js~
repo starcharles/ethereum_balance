@@ -1,0 +1,15 @@
+var express = require('express');
+var ethinfo = require('../modules/ethInfo');
+var router = express.Router();
+
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('index', {
+    title: '1st Dapp built with Ethereum,Node.js,Express,AngularJS ',
+    coinbase: ethinfo.getCoinbase,
+    balance: ethinfo.getBalance
+  });
+
+});
+
+module.exports = router;

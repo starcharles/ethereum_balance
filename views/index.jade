@@ -1,0 +1,13 @@
+extends header
+
+block content
+  body(ng-app="mainModule")
+    h1= title
+    h3 built with Ethereum,Node.js,Express,AngularJS
+    p Welcome to  #{title}
+    div(ng-Controller="mainCtrl") アカウント情報
+      button(type="button" ng-clicked="getNodeInfo();") 更新
+      p My Coinbase(primary) : #{coinbase}
+      div Balance:
+        p Wei : #{balance.wei} wei
+        p Ether : #{balance.ether} ether 
